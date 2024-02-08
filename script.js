@@ -9,6 +9,9 @@ const score1 = document.getElementById('score--1');
 const current0 = document.getElementById('current--0');
 const current1 = document.getElementById('current--1');
 
+const name0 = document.getElementById('name--0');
+const name1 = document.getElementById('name--1');
+
 const diceBase = document.querySelector('.dice');
 const btnNewGame = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
@@ -22,6 +25,10 @@ const init = function () {
   currentScore = 0;
   activePlayer = 0;
   playing = true;
+
+  // Get player names from user input
+  name0.textContent = prompt('Enter Player 1 name:') || 'Player 1';
+  name1.textContent = prompt('Enter Player 2 name:') || 'Player 2';
 
   // Reset UI elements for both players
   score0.textContent = 0;
@@ -97,5 +104,5 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNewGame.addEventListener('click', function () {
-  init;
+  init(); // Fix: You need to call the init function here
 });
