@@ -3,12 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
-  box-sizing: border-box;
 }
 
 body {
@@ -47,13 +46,13 @@ main {
 
 /* ELEMENTS */
 .name {
-  position: relative;
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   word-spacing: 2px;
   font-weight: 300;
   margin-bottom: 1rem;
+  color: #fff; /* Improved visibility on darker background */
 }
 
 .score {
@@ -71,10 +70,6 @@ main {
 }
 .player--active .score {
   font-weight: 400;
-}
-
-.player--active .current {
-  opacity: 1;
 }
 
 .current {
@@ -104,7 +99,7 @@ main {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  color: #444;
+  color: #fff; /* Improved visibility on darker background */
   background: none;
   border: none;
   font-family: inherit;
@@ -114,19 +109,10 @@ main {
   font-weight: 400;
   transition: all 0.2s;
 
-  background-color: white;
-  background-color: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(10px);
-
+  background-color: #c7365f; /* Consistent color for buttons */
   padding: 0.7rem 2.5rem;
   border-radius: 50rem;
   box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
-}
-
-.btn::first-letter {
-  font-size: 2.4rem;
-  display: inline-block;
-  margin-right: 0.7rem;
 }
 
 .btn--new {
