@@ -97,5 +97,5 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNewGame.addEventListener('click', function () {
-  init();
+  init;
 });
