@@ -26,10 +26,6 @@ const init = function () {
   activePlayer = 0;
   playing = true;
 
-  // Get player names from user input
-  name0.textContent = prompt('Enter Player 1 name:') || 'Player 1';
-  name1.textContent = prompt('Enter Player 2 name:') || 'Player 2';
-
   // Reset UI elements for both players
   score0.textContent = 0;
   score1.textContent = 0;
@@ -41,6 +37,12 @@ const init = function () {
   player1.classList.remove('player--winner', 'player--active');
   player0.classList.add('player--active');
 };
+
+// Prompt user for player names after the page has loaded
+setTimeout(function () {
+  name0.textContent = prompt('Enter Player 1 name:') || 'Player 1';
+  name1.textContent = prompt('Enter Player 2 name:') || 'Player 2';
+}, 500); // Adjust the delay as needed
 
 init();
 
