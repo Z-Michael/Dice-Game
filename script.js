@@ -38,12 +38,6 @@ const init = function () {
   player0.classList.add('player--active');
 };
 
-// Prompt user for player names after the page has loaded
-setTimeout(function () {
-  name0.textContent = prompt('Enter Player 1 name:') || 'Player 1';
-  name1.textContent = prompt('Enter Player 2 name:') || 'Player 2';
-}, 500); // Adjust the delay as needed
-
 init();
 
 // Function to switch players
@@ -106,5 +100,8 @@ btnHold.addEventListener('click', function () {
 });
 
 btnNewGame.addEventListener('click', function () {
+  name0.textContent = prompt('Enter Player 1 name:') || 'Player 1';
+  name1.textContent = prompt('Enter Player 2 name:') || 'Player 2';
+
   init(); // Fix: You need to call the init function here
 });
